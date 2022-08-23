@@ -1,9 +1,24 @@
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-toolbar>
+  <mat-toolbar-row class="firstRow">
+    <span>Språk</span>
+    <span>Teckspråk</span>
+    <span>Ordlista</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="secondRow">
+    <h3>Kronoportal</h3>
+    <span class="example-spacer"></span>
+    <button mat-button class="example-icon">
+      <span class="headerSpan">Sök</span>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-button class="example-icon">
+      <span class="headerSpan">Mina sidor</span>
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-button class="example-icon">
+      <span class="headerSpan">Meny</span>
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-  </mat-toolbar>
-</p>
+  </mat-toolbar-row>
+</mat-toolbar>
