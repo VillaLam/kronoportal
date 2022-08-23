@@ -17,6 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 import {MatCardModule} from '@angular/material/card';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormControl } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -42,6 +43,7 @@ import { FormControl } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
