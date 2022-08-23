@@ -1,7 +1,7 @@
 <div class="register">
   <form [formGroup]="registerForm" (ngSubmit)="register()">
     <mat-card>
-        <mat-card-title>Registrering</mat-card-title>
+      <mat-card-title>Registrering</mat-card-title>
 
       <mat-form-field appearance="outline" class="registerInput">
         <mat-label>Förnamn</mat-label>
@@ -36,6 +36,11 @@
       <mat-form-field appearance="outline" class="registerInput">
         <mat-label>Bekräfta Lösenord</mat-label>
         <input matInput formControlName="confirmPassword">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Role</mat-label>
+        <input matInput formControlName="role">
       </mat-form-field>
 
       <button mat-raised-button type="submit">Registrera dig</button>

@@ -20,8 +20,10 @@ export class RegisterComponent implements OnInit {
       socialSecurityNumber: new FormControl(''),
       password: new FormControl(''),
       confirmPassword: new FormControl(''),
+      role: new FormControl('DEBTOR'),
+
     })
-   }
+  }
 
   ngOnInit(): void {
   }
