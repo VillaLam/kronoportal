@@ -13,6 +13,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { RegisterComponent } from './components/register/register.component';
+import {MatCardModule} from '@angular/material/card';
+import { FooterComponent } from './components/footer/footer.component';
+import { FormControl } from '@angular/forms';
+
 
 
 
@@ -22,6 +27,8 @@ import {MatButtonModule} from '@angular/material/button';
     LoginComponent,
     DashboardComponent,
     HeaderComponent,
+    RegisterComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,8 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
