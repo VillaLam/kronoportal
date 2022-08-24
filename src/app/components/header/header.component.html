@@ -6,13 +6,15 @@
   </mat-toolbar-row>
 
   <mat-toolbar-row class="secondRow">
-    <h3>Kronoportal</h3>
+    <button mat-button routerLink="/">
+      <h3 >Kronoportal</h3>
+    </button>
     <span class="example-spacer"></span>
     <button mat-button class="example-icon">
       <span class="headerSpan">Sök</span>
       <mat-icon>search</mat-icon>
     </button>
-    <button mat-button class="example-icon">
+    <button mat-button class="example-icon"  routerLink="/user" >
       <span class="headerSpan">Mina sidor</span>
       <mat-icon>person</mat-icon>
     </button>
@@ -22,3 +24,4 @@
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
+<router-outlet></router-outlet>

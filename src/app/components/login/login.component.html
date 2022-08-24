@@ -1,3 +1,25 @@
+<div class="logIn">
+  <form [formGroup]="logInForm" (ngSubmit)="logIn()">
+    <mat-card>
+      <mat-card-title>Logga in</mat-card-title>
 
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Personnummer</mat-label>
+        <input matInput formControlName="socialSecurityNumber">
+      </mat-form-field>
 
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Lösenord</mat-label>
+        <input matInput formControlName="password">
+      </mat-form-field>
 
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Role</mat-label>
+        <input matInput formControlName="role">
+      </mat-form-field>
+
+      <button mat-raised-button type="submit">Logga in</button>
+
+    </mat-card>
+  </form>
+</div>

@@ -14,4 +14,9 @@ export class UserServiceService {
   createUser(Userobj: User): Observable<any> {
     return this.httpcli.post<User>("http://localhost:9001/user/register", Userobj)
   }
+
+  logInUser(Userobj: User): Observable<any> {
+    return this.httpcli.post<User>("http://localhost:9001/user/login", Userobj)
+  }
+
 }
