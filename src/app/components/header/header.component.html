@@ -14,8 +14,12 @@
       <span class="headerSpan">Sök</span>
       <mat-icon>search</mat-icon>
     </button>
-    <button mat-button class="example-icon"  routerLink="/user" >
+    <button  *ngIf="loggedIn" mat-button class="example-icon"  routerLink="/userprofile" >
       <span class="headerSpan">Mina sidor</span>
+      <mat-icon>person</mat-icon>
+    </button>
+    <button  *ngIf="!loggedIn" mat-button class="example-icon"  routerLink="/user" >
+      <span class="headerSpan">Logga in</span>
       <mat-icon>person</mat-icon>
     </button>
     <button mat-button class="example-icon">
