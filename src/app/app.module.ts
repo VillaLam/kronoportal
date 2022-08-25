@@ -19,6 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormControl } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 
@@ -32,6 +33,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     HeaderComponent,
     RegisterComponent,
     FooterComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
