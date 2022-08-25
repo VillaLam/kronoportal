@@ -27,21 +27,25 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
-    this.loggedIn = true;
     let role = this.logInForm.controls["role"].value;
     console.log(this.logInForm.value)
     this.authservice.logInUser(this.logInForm.value).subscribe(
       (res) => {
         console.log("User logged in", res)
+        sessionStorage.setItem("loggedin", "true");
         sessionStorage.setItem("role", this.logInForm.controls["role"].value)
 
         this.authservice.setBearerToken(res["token"])
 
+        this.loggedIn = true;
+
         if (role === "ADMIN") {
           this.router.navigate(['admin'])
+          this.authservice.updatemenu.next()
         }
         if (role === "DEBTOR") {
           this.router.navigate(["debtor"])
+          this.authservice.updatemenu.next()
         }
       }
     )
