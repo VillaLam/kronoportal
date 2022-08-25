@@ -9,7 +9,7 @@ import { Debt } from '../models/debt';
 })
 export class DebtServiceService {
   debts: Array<Debt> = [];
-  debtObject: BehaviorSubject<Array<Debt>> = new BehaviorSubject(this.debts);
+  debtSubject: BehaviorSubject<Array<Debt>>
 
 
   constructor(private httpClient: HttpClient) { }
@@ -20,7 +20,7 @@ export class DebtServiceService {
       tap((debt) => {
         console.log('got response', debt);
         this.debts.push(debt);
-        this.debtObject.next(this.debts)
+        this.debtSubject.next(this.debts)
       })
     );
   }
@@ -28,20 +28,23 @@ export class DebtServiceService {
   //GET all Debts
   getAllDebts() {
     console.log("get all Debt called")
-    return this.httpClient.get<Array<Debt>>("http://localhost:9009/debt/all").subscribe(apiDebts => {
+    return this.httpClient.get<Debt[]>("http://localhost:9009/debt/all").subscribe((apiDebts) => {
       this.debts = apiDebts;
-      this.debtObject?.next(this.debts);
+      this.debtSubject.next(this.debts);
     });
   }
 
+
   //GET debt by user ID
-  byUserId(userId): Observable<any> {
+  GetDebtByUserId(userId: number): Observable<any> {
     return this.httpClient.get(`http://localhost:9009/debt/getdebt/${userId}`)
   }
 
+
+
   viewAllDebts(): Observable<Array<Debt>> {
     console.log("view all debt called");
-    return this.debtObject;
+    return this.debtSubject;
   }
 
 
@@ -52,7 +55,7 @@ export class DebtServiceService {
       .pipe(tap((id) => {
         let indx = this.debts.findIndex((order) => order.debtId === id);
         this.debts.splice(indx, 1);
-        this.debtObject.next(this.debts);
+        this.debtSubject.next(this.debts);
       }));
   }
 

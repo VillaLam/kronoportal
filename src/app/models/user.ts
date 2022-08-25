@@ -1,4 +1,5 @@
 export class User {
+  userId: number;
   socialSecurityNumber: string = "";
   password: string = "";
   firstName: string = "";

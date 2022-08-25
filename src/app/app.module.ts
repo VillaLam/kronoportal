@@ -19,6 +19,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormControl } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { UserCardComponent } from './components/user-card/user-card.component';
+import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
+import { DebtCardComponent } from './components/debt-card/debt-card.component';
+import { DebtViewComponent } from './components/debt-view/debt-view.component';
+import { TempInterfaceComponent } from './components/temp-interface/temp-interface.component';
 
 
 
@@ -32,6 +37,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     HeaderComponent,
     RegisterComponent,
     FooterComponent,
+    UserCardComponent,
+    UserDashboardComponent,
+    DebtCardComponent,
+    DebtViewComponent,
+    TempInterfaceComponent,
   ],
   imports: [
     BrowserModule,

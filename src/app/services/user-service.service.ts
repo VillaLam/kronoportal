@@ -2,13 +2,18 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { User } from '../models/user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
+  users: Array<User> = [];
+  usersSubject: BehaviorSubject<Array<User>> = new BehaviorSubject(
+    this.users
+
+  );
 
   constructor(private httpcli: HttpClient) { }
 
@@ -28,9 +33,20 @@ export class UserServiceService {
     return this.httpcli.post<User>("http://localhost:9001/user/login", Userobj)
   }
   // GET
-  getUserBySocialSecurityNumber (socialSecurityNumber: Number): Observable<any> {
+  getUserBySocialSecurityNumber(socialSecurityNumber: string): Observable<any> {
     return this.httpcli.get(`http://localhost:9001/user/getUserBySocialSecurityNumber/${socialSecurityNumber}`)
   }
+
+  //GET all users
+  getUsersFromServer() {
+    return this.httpcli
+      .get<User[]>(`http://localhost:9001/user/getAllUsers`)
+      .subscribe((apiUsers) => {
+        this.users = apiUsers;
+        this.usersSubject.next(this.users);
+      });
+  }
+
 
   // saves token in sessionStorage
   setBearerToken(token: string) {
