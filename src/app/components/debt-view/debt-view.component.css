@@ -7,6 +7,8 @@
 }
 
 h1 {
-  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 25px;
 
 }
