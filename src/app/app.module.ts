@@ -24,6 +24,7 @@ import { UserDashboardComponent } from './components/user-dashboard/user-dashboa
 import { DebtCardComponent } from './components/debt-card/debt-card.component';
 import { DebtViewComponent } from './components/debt-view/debt-view.component';
 import { TempInterfaceComponent } from './components/temp-interface/temp-interface.component';
+import { UserViewComponent } from './components/user-view/user-view.component';
 
 
 
@@ -42,6 +43,7 @@ import { TempInterfaceComponent } from './components/temp-interface/temp-interfa
     DebtCardComponent,
     DebtViewComponent,
     TempInterfaceComponent,
+    UserViewComponent,
   ],
   imports: [
     BrowserModule,

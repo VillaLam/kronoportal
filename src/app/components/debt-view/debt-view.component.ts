@@ -16,7 +16,7 @@ export class DebtViewComponent implements OnInit {
   debts: Array<Debt> = [];
   users: Array<User> = [];
 
-  constructor(private debtService: DebtServiceService, private userService: UserServiceService,) { }
+  constructor(private debtService: DebtServiceService, private userService: UserServiceService) { }
 
   ngOnInit(): void {
 
