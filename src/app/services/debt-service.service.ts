@@ -26,12 +26,9 @@ export class DebtServiceService {
   }
 
   //GET all Debts
-  getAllDebts() {
+  getAllDebts(): Observable<Debt[]> {
     console.log("get all Debt called")
-    return this.httpClient.get<Debt[]>("http://localhost:9009/debt/all").subscribe((apiDebts) => {
-      this.debts = apiDebts;
-      this.debtSubject.next(this.debts);
-    });
+    return this.httpClient.get<Debt[]>("http://localhost:9009/debt/all")
   }
 
 

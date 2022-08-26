@@ -9,7 +9,7 @@ import { UserDashboardComponent } from './components/user-dashboard/user-dashboa
 const routes: Routes = [
   { path: 'user', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'admin-dashboard', component: DashboardComponent },
   { path: 'debtview', component: DebtViewComponent },
   { path: 'user-dashboard', component: UserDashboardComponent }
 
