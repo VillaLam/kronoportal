@@ -1,0 +1,13 @@
+<div id="x">
+  <div>
+    <h1>Here you can see all debts gathereed so far</h1>
+  </div>
+  <br>
+
+  <div class="disp"></div>
+  <div *ngFor="let debt of debts">
+    <app-debt-card [debt]="debt">
+    </app-debt-card>
+  </div>
+
+</div>

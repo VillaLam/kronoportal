@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Debt } from 'src/app/models/debt';
 import { User } from 'src/app/models/user';
 import { DebtServiceService } from 'src/app/services/debt-service.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-debt-view',
+  templateUrl: './debt-view.component.html',
+  styleUrls: ['./debt-view.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DebtViewComponent implements OnInit {
+
+  @Input()
+  public debt: Debt = new Debt();
+  debts: Array<Debt> = [];
   users: Array<User> = [];
 
-  debts: Array<Debt> = [];
-  debt: Debt = new Debt();
-  userId: number;
-  httpClient: any;
-
-  constructor(private userService: UserServiceService, private debtService: DebtServiceService) { }
+  constructor(private debtService: DebtServiceService, private userService: UserServiceService,) { }
 
   ngOnInit(): void {
+
     console.log("Admin dash pre");
     this.userService.getUsersFromServer();
     this.debtService.getAllDebt();
