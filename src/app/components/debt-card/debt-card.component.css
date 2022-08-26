@@ -1,4 +1,6 @@
 mat-card {
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(212, 176, 241);
   color: rgb(0, 0, 0);
+  min-height: 200px;
+
 }
