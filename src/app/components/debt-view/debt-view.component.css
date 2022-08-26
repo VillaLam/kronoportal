@@ -1,6 +1,9 @@
-div {
+#x {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+
 }
 
 h1 {

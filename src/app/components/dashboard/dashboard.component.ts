@@ -10,7 +10,7 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  public users: Array<User> = [];
+  users: Array<User> = [];
 
   debts: Array<Debt> = [];
   debt: Debt = new Debt();
@@ -22,15 +22,21 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     console.log("Admin dash pre");
     this.userService.getUsersFromServer();
-    //this.debtService.getAllDebts();
+    this.debtService.getAllDebt();
     console.log("Admin dash post");
 
+    this.debtService.viewAllDebts().subscribe(
+      result => {
+        this.debts = result;
+        console.log(result)
+      })
     this.userService.viewUsers().subscribe(
       result => {
         this.users = result;
         console.log(result)
 
       })
+
 
 
   }

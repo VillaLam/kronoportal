@@ -1,7 +1,21 @@
-<mat-card class="order-card">
-
+<mat-card class="debt-card">
   <mat-card-title>
-    Order status: {{debt.amount}}
+    debt card component html
   </mat-card-title>
+  <div>
+    Debt ID: {{debt.debtId}}
+    <div>
+      <p> User ID: {{debt.userId}}</p>
+    </div>
+
+  </div>
+  <mat-card-content>
+    <p>origin: {{debt.dotDate}}</p>
+    <p>Debt amount: {{debt.amount}}</p>
+    <p>plan duration: {{debt.planDuration }}</p>
+
+  </mat-card-content>
 
 </mat-card>
+<br>
+<br>

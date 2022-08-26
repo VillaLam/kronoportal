@@ -13,7 +13,6 @@ export class TempInterfaceComponent implements OnInit {
 
   ngOnInit(): void {
     this.userservice.getUserBySocialSecurityNumber
-    this.debtService.getAllDebts
   }
 
 }

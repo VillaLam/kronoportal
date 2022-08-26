@@ -1,31 +1,13 @@
-<div>
-  <h1>Here you can see all debts gathereed so far</h1>
-</div>
-
-<div class="disp"></div>
-<div *ngFor="let debt of debts">
-  <app-debt-card [debt]="debt">
-  </app-debt-card>
-</div>
-
-
-<mat-card class="user-card">
+<div id="x">
   <div>
-    <mat-card-header>
-      <mat-card-title>
-        <h5>{{debt.debtOrigin}} {{debt.userId}}</h5>
-      </mat-card-title>
-
-    </mat-card-header>
+    <h1>Here you can see all debts gathereed so far</h1>
   </div>
-  <mat-card-content>
-    <p>{{debt.userId}}</p>
-    <p>{{debt.amount}}</p>
-    <p>{{debt.amount}}</p>
-    <p>{{debt.amount}}</p>
-    <p>{{debt.amount}}</p>
-    <p>{{debt.amount}}</p>
-  </mat-card-content>
+  <br>
 
+  <div class="disp"></div>
+  <div *ngFor="let debt of debts">
+    <app-debt-card [debt]="debt">
+    </app-debt-card>
+  </div>
 
-</mat-card>
+</div>

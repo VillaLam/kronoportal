@@ -9,7 +9,10 @@ import { Debt } from '../models/debt';
 })
 export class DebtServiceService {
   debts: Array<Debt> = [];
-  debtSubject: BehaviorSubject<Array<Debt>>
+  debtSubject: BehaviorSubject<Array<Debt>> = new BehaviorSubject(
+    this.debts
+
+  );
 
 
   constructor(private httpClient: HttpClient) { }
@@ -26,9 +29,13 @@ export class DebtServiceService {
   }
 
   //GET all Debts
-  getAllDebts(): Observable<Debt[]> {
-    console.log("get all Debt called")
-    return this.httpClient.get<Debt[]>("http://localhost:9009/debt/all")
+  getAllDebt() {
+    return this.httpClient
+      .get<Debt[]>('http://localhost:9009/debt/all')
+      .subscribe((apiDebts) => {
+        this.debts = apiDebts;
+        this.debtSubject.next(this.debts);
+      })
   }
 
 
