@@ -63,7 +63,7 @@ export class DebtServiceService {
       }));
   }
 
-  //PUT (updateOrder)
+  //PUT (uodate debt)
   updateDebt(updateDebt: Debt): Observable<any> {
     return this.httpClient.put(
       'http://localhost:9009/debt/update',

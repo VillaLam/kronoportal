@@ -1,27 +1,32 @@
 <mat-toolbar>
   <mat-toolbar-row class="firstRow">
     <span>Språk</span>
-    <span>Teckspråk</span>
+    <span>Teckenspråk</span>
     <span>Ordlista</span>
   </mat-toolbar-row>
 
   <mat-toolbar-row class="secondRow">
     <button mat-button routerLink="/">
-      <h3 >Kronoportal</h3>
+      <h3>Kronoportal</h3>
     </button>
+
     <span class="example-spacer"></span>
+
     <button mat-button class="example-icon">
-      <span class="headerSpan">Sök</span>
       <mat-icon>search</mat-icon>
     </button>
-    <button  *ngIf="loggedIn" mat-button class="example-icon"  routerLink="/userprofile" >
+
+
+    <button *ngIf="loggedIn" mat-button class="example-icon" routerLink="/mydebt">
       <span class="headerSpan">Mina sidor</span>
       <mat-icon>person</mat-icon>
     </button>
-    <button  *ngIf="!loggedIn" mat-button class="example-icon"  routerLink="/user" >
+
+    <button *ngIf="!loggedIn" mat-button class="example-icon" routerLink="/user">
       <span class="headerSpan">Logga in</span>
       <mat-icon>person</mat-icon>
     </button>
+
     <button mat-button class="example-icon" [matMenuTriggerFor]="menu">
       <span class="headerSpan">Meny</span>
       <mat-menu #menu="matMenu">
@@ -36,6 +41,9 @@
       </mat-menu>
       <mat-icon>menu</mat-icon>
     </button>
+
+
+
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

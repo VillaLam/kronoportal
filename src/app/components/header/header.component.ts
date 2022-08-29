@@ -8,20 +8,19 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 })
 export class HeaderComponent implements OnInit {
 
-  loggedIn = false;
+  loggedIn;
 
   constructor(private authservice: UserServiceService) { }
 
   ngOnInit(): void {
-    this.authservice.updatemenu.subscribe(res => {
-      this.headerDisplay();
-    })
+    this.headerDisplay();
   }
 
-  headerDisplay () {
-    if ( sessionStorage.getItem("loggedin") === "true") {
+  headerDisplay() {
+    if (sessionStorage.getItem("loggedin") === "true") {
       this.loggedIn = true;
-    }
+    } else
+      this.loggedIn = false;
   }
 
 }
