@@ -27,8 +27,18 @@
       <mat-icon>person</mat-icon>
     </button>
 
-    <button mat-button class="example-icon">
+    <button mat-button class="example-icon" [matMenuTriggerFor]="menu">
       <span class="headerSpan">Meny</span>
+      <mat-menu #menu="matMenu">
+        <button *ngIf="loggedIn" mat-menu-item>
+          <span class="menySpan">Skapa case</span>
+          <mat-icon class="menyIcon">note_add</mat-icon>
+        </button>
+        <button *ngIf="loggedIn" mat-menu-item>
+          <span class="menySpan">Logga ut</span>
+          <mat-icon class="menyIcon">logout</mat-icon>
+        </button>
+      </mat-menu>
       <mat-icon>menu</mat-icon>
     </button>
 

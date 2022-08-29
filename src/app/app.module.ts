@@ -30,6 +30,8 @@ import { VinChaRtComponent } from './components/vin-cha-rt/vin-cha-rt.component'
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MyDebtsComponent } from './components/my-debts/my-debts.component';
 import { MyDebtCardComponent } from './components/my-debt-card/my-debt-card.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 
@@ -68,7 +70,8 @@ import { MyDebtCardComponent } from './components/my-debt-card/my-debt-card.comp
     MatCardModule,
     HttpClientModule,
     MatGridListModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
