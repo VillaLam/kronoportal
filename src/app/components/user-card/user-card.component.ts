@@ -13,6 +13,7 @@ export class UserCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
