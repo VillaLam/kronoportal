@@ -1,17 +1,23 @@
 <mat-card class="user-card">
   <mat-card-title>
-    User-card for Ä{{user.firstName}}
+    User-card for {{user.firstName}}
   </mat-card-title>
   <div>
 
     <div>
-      <p> User ID: {{user.userId}}</p>
+      <p> <b>User ID : {{user.userId}}</b></p>
     </div>
 
   </div>
   <mat-card-content>
     <p>Förnamn : {{user.firstName}}</p>
     <p>Efternamn: {{user.lastName}}</p>
+    <p>Roll: <b>{{user.role}}</b></p>
+    <p>Efternamn: {{user.phoneNumber}}</p>
+    <p>Efternamn: {{user.address}}</p>
+
+
+
 
   </mat-card-content>
 

@@ -9,7 +9,12 @@ export class UserGuardGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    const role = sessionStorage.getItem("role");
+    const loginstatus = sessionStorage.getItem("loggedin")
+    if (role === "ADMIN" && loginstatus === "true") {
+      return true;
+    }
+    return false;
   }
-  
+
 }

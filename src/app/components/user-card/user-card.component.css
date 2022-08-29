@@ -1,4 +1,5 @@
 .user-card {
   background-color: hsl(120, 45%, 81%);
   min-height: 200px;
+  max-width: 500px;
 }

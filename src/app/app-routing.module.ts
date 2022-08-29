@@ -7,19 +7,21 @@ import { MyDebtsComponent } from './components/my-debts/my-debts.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { VinChaRtComponent } from './components/vin-cha-rt/vin-cha-rt.component';
+import { UserGuardGuard } from './guards/user-guard.guard';
 
 const routes: Routes = [
   { path: 'user', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin-dashboard', component: DashboardComponent },
-  { path: 'debtview', component: DebtViewComponent },
+  { path: 'admin-dashboard', component: DashboardComponent, canActivate: [UserGuardGuard] },
+  { path: 'debtview', component: DebtViewComponent, canActivate: [UserGuardGuard] },
   { path: 'user-dashboard', component: UserDashboardComponent },
   { path: 'vin', component: VinChaRtComponent },
-
-  { path: 'mydebt', component: MyDebtsComponent }
-
+  { path: 'mydebt', component: MyDebtsComponent },
 
 
+
+  { path: '', redirectTo: 'register', pathMatch: 'full' },
+  { path: '**', component: RegisterComponent },
 
 ];
 
