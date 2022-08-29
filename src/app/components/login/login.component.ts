@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           this.authservice.updatemenu.next()
         }
         if (role === "DEBTOR") {
-          this.router.navigate(['debtview'])
+          this.router.navigate(['mydebt'])
           this.authservice.updatemenu.next()
         }
       }

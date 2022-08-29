@@ -46,6 +46,7 @@ export class UserServiceService {
         this.usersSubject.next(this.users);
       });
   }
+
   viewUsers(): Observable<User[]> {
     return this.usersSubject;
   }
