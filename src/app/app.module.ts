@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -25,6 +26,11 @@ import { DebtCardComponent } from './components/debt-card/debt-card.component';
 import { DebtViewComponent } from './components/debt-view/debt-view.component';
 import { TempInterfaceComponent } from './components/temp-interface/temp-interface.component';
 import { UserViewComponent } from './components/user-view/user-view.component';
+import { VinChaRtComponent } from './components/vin-cha-rt/vin-cha-rt.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { MyDebtsComponent } from './components/my-debts/my-debts.component';
+import { MyDebtCardComponent } from './components/my-debt-card/my-debt-card.component';
+
 
 
 
@@ -44,6 +50,9 @@ import { UserViewComponent } from './components/user-view/user-view.component';
     DebtViewComponent,
     TempInterfaceComponent,
     UserViewComponent,
+    VinChaRtComponent,
+    MyDebtsComponent,
+    MyDebtCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +67,8 @@ import { UserViewComponent } from './components/user-view/user-view.component';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
