@@ -34,6 +34,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DebtRegistrationComponent } from './components/debt-registration/debt-registration.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { DebtCreationComponent } from './components/debt-creation/debt-creation.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -77,7 +78,8 @@ import { DebtCreationComponent } from './components/debt-creation/debt-creation.
     MatGridListModule,
     NgxChartsModule,
     MatMenuModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
