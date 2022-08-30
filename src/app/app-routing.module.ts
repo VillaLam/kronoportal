@@ -11,14 +11,14 @@ import { UserDashboardComponent } from './components/user-dashboard/user-dashboa
 import { UserGuardGuard } from './guards/user-guard.guard';
 
 const routes: Routes = [
-  { path: 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent, canActivate: [UserGuardGuard] },
   { path: 'admin-dashboard', component: DashboardComponent, canActivate: [UserGuardGuard] },
   { path: 'debtview', component: DebtViewComponent, canActivate: [UserGuardGuard] },
   { path: 'user-dashboard', component: UserDashboardComponent },
   { path: 'mydebt', component: MyDebtsComponent },
-  { path: 'debtregistration', component: DebtRegistrationComponent },
+  { path: 'debtregistration', component: DebtRegistrationComponent, canActivate: [UserGuardGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'newdebt', component: DebtCreationComponent },
+  { path: 'newdebt', component: DebtCreationComponent, canActivate: [UserGuardGuard] },
 
 
 
