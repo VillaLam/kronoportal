@@ -26,4 +26,10 @@ export class OrganicRouteService {
   openUserDasdhboard() {
     this.router.navigate(['mydebt'])
   }
+  openDebtReg() {
+    this.router.navigate(['debtregistration'])
+
+  }
+
+
 }

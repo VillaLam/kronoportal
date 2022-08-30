@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
       return true
     } else {
       console.log("you need to login as a DEBTOR")
-      this.organicroute.openLogin();
+      this.organicroute.openHome();
       return false;
     }
   }
