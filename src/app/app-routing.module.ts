@@ -8,7 +8,6 @@ import { LoginComponent } from './components/login/login.component';
 import { MyDebtsComponent } from './components/my-debts/my-debts.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
-import { VinChaRtComponent } from './components/vin-cha-rt/vin-cha-rt.component';
 import { UserGuardGuard } from './guards/user-guard.guard';
 
 const routes: Routes = [
@@ -16,7 +15,6 @@ const routes: Routes = [
   { path: 'admin-dashboard', component: DashboardComponent, canActivate: [UserGuardGuard] },
   { path: 'debtview', component: DebtViewComponent, canActivate: [UserGuardGuard] },
   { path: 'user-dashboard', component: UserDashboardComponent },
-  { path: 'vin', component: VinChaRtComponent },
   { path: 'mydebt', component: MyDebtsComponent },
   { path: 'debtregistration', component: DebtRegistrationComponent },
   { path: 'login', component: LoginComponent },
