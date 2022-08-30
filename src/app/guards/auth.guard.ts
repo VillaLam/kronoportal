@@ -12,11 +12,11 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    const loginstatus = sessionStorage.getItem("loggedin")
-    if (loginstatus === "true") {
+    const currentrole = sessionStorage.getItem("role")
+    if (currentrole === "DEBTOR") {
       return true
     } else {
-      console.log("you need to login")
+      console.log("you need to login as a DEBTOR")
       this.organicroute.openLogin();
       return false;
     }

@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MyDebtsComponent } from './components/my-debts/my-debts.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
+import { AuthGuard } from './guards/auth.guard';
 import { UserGuardGuard } from './guards/user-guard.guard';
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'admin-dashboard', component: DashboardComponent, canActivate: [UserGuardGuard] },
   { path: 'debtview', component: DebtViewComponent, canActivate: [UserGuardGuard] },
   { path: 'user-dashboard', component: UserDashboardComponent },
-  { path: 'mydebt', component: MyDebtsComponent },
+  { path: 'mydebt', component: MyDebtsComponent, canActivate: [AuthGuard] },
   { path: 'debtregistration', component: DebtRegistrationComponent, canActivate: [UserGuardGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'newdebt', component: DebtCreationComponent, canActivate: [UserGuardGuard] },
