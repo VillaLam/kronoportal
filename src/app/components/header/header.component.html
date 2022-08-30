@@ -40,7 +40,7 @@
           <mat-icon class="menyIcon">note_add</mat-icon>
         </button>
 
-        <button mat-menu-item routerLink="/newdebt">
+        <button *ngIf="displayAdmin" mat-menu-item routerLink="/newdebt">
           <span class="menySpan">new debt</span>
           <mat-icon class="menyIcon">plane</mat-icon>
         </button>
