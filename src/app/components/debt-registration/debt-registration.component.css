@@ -1,0 +1,42 @@
+div {
+  display: flex;
+  justify-content: center;
+}
+.caseCard {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  margin-top: 50px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+  margin: 5px;
+}
+
+.mat-card>:first-child, .mat-card-content>:first-child {
+  margin-top: 10px;
+}
+
+p {
+  margin-top: 10px;
+}
+
+hr.rounded {
+  border-top: 1px solid rgb(173, 170, 170);
+  width: 400px;
+  margin-top: 25px;
+  opacity: 50%;
+}
+button {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin-top: 10px;
+}
