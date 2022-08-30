@@ -22,7 +22,6 @@
     </button>
 
 
-
     <button *ngIf="displayDebtor" mat-button class="example-icon" routerLink="/mydebt">
       <span class="headerSpan">Mina sidor</span>
       <mat-icon>person</mat-icon>
@@ -41,10 +40,16 @@
           <mat-icon class="menyIcon">note_add</mat-icon>
         </button>
 
+        <button mat-menu-item routerLink="/newdebt">
+          <span class="menySpan">new debt</span>
+          <mat-icon class="menyIcon">plane</mat-icon>
+        </button>
+
         <button *ngIf="loggedIn" mat-menu-item (click)="logout()" routerLink="/login">
           <span class="menySpan">Logga ut</span>
           <mat-icon class="menyIcon">logout</mat-icon>
         </button>
+
       </mat-menu>
       <mat-icon>menu</mat-icon>
     </button>
