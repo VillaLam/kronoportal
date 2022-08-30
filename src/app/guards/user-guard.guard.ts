@@ -14,6 +14,7 @@ export class UserGuardGuard implements CanActivate {
     if (role === "ADMIN" && loginstatus === "true") {
       return true;
     }
+    console.log("your need to login as a ADMIN")
     return false;
   }
 }
