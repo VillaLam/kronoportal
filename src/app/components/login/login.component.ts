@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
+
     let role = this.logInForm.controls["role"].value;
     console.log(this.logInForm.value)
     this.authservice.logInUser(this.logInForm.value).subscribe(
@@ -45,7 +46,7 @@ export class LoginComponent implements OnInit {
           this.authservice.updatemenu.next()
         }
         if (role === "DEBTOR") {
-          this.router.navigate(['debtview'])
+          this.router.navigate(['mydebt'])
           this.authservice.updatemenu.next()
         }
       }
@@ -56,6 +57,7 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
 
 
 

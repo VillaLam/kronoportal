@@ -1,0 +1,20 @@
+<div>
+  <form [formGroup]="findBySocialSecurityNumber" (ngSubmit)="findDebtor()">
+    <mat-card class="caseCard">
+      <mat-card-title>
+        Hitta Gäldenär
+      </mat-card-title>
+      <p>
+        Om användaren redan finns, ange personnummret för att lägga till ärande. Om användaren inte finns, vänligen registrera användare innan.
+      </p>
+      <mat-form-field class="findDebtor" appearance="outline">
+        <mat-label>Personnummer</mat-label>
+        <input matInput formControlName="socialSecurityNumber">
+      </mat-form-field>
+      <button mat-raised-button type="submit">Hitta Gäldenär</button>
+      <hr class="rounded">
+      <h4 style="font-weight: bold;">ELLER</h4>
+      <button mat-raised-button routerLink="register">Skapa Gäldenär</button>
+    </mat-card>
+  </form>
+</div>

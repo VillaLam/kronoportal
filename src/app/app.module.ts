@@ -31,6 +31,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MyDebtsComponent } from './components/my-debts/my-debts.component';
 import { MyDebtCardComponent } from './components/my-debt-card/my-debt-card.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { DebtRegistrationComponent } from './components/debt-registration/debt-registration.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -55,6 +57,7 @@ import {MatMenuModule} from '@angular/material/menu';
     VinChaRtComponent,
     MyDebtsComponent,
     MyDebtCardComponent,
+    DebtRegistrationComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ import {MatMenuModule} from '@angular/material/menu';
     HttpClientModule,
     MatGridListModule,
     NgxChartsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
