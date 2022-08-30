@@ -14,8 +14,11 @@
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="registerInput">
-        <mat-label>Role</mat-label>
-        <input matInput formControlName="role">
+        <mat-label>Roll</mat-label>
+        <mat-select formControlName="role">
+          <mat-option value="ADMIN">Admin</mat-option>
+          <mat-option value="DEBTOR">Debtor</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <button mat-raised-button type="submit">Logga in</button>
