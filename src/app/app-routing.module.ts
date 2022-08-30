@@ -4,6 +4,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DebtCreationComponent } from './components/debt-creation/debt-creation.component';
 import { DebtRegistrationComponent } from './components/debt-registration/debt-registration.component';
 import { DebtViewComponent } from './components/debt-view/debt-view.component';
+import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MyDebtsComponent } from './components/my-debts/my-debts.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'debtregistration', component: DebtRegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'newdebt', component: DebtCreationComponent },
+  { path: 'home', component: HomeComponent},
 
 
 

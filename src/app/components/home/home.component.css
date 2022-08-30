@@ -1,0 +1,18 @@
+.home {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: 30pxpx;
+}
+
+img {
+  margin-top: 55px;
+  width: 600px;
+  height: 500px;
+}
+
+.text {
+  margin-top: 300px;
+  width: 260px;
+  margin-right: 100px;
+}
