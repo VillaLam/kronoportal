@@ -9,8 +9,8 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 export class HeaderComponent implements OnInit {
   currentRole: String;
 
-  displayAdmin = false;
-  displayCustomer = false;
+  displayAdmin: Boolean;
+  displayDebtor: Boolean;
   loggedIn;
 
   constructor(private authservice: UserServiceService) { }
@@ -19,7 +19,10 @@ export class HeaderComponent implements OnInit {
     this.authservice.updatemenu.subscribe(res => {
       this.headerDisplay();
     })
+    this.headerDisplay();
+
   }
+
   logout() {
     sessionStorage.clear();
     sessionStorage.setItem("loggedin", "false");
@@ -31,14 +34,16 @@ export class HeaderComponent implements OnInit {
   headerDisplay() {
     if (sessionStorage.getItem("loggedin") === "true") {
       this.loggedIn = true;
-
+      this.currentRole = sessionStorage.getItem("role")
       this.displayAdmin = this.currentRole == "ADMIN";
-      this.displayCustomer = this.currentRole == "DEBTOR";
-    } else
-      this.loggedIn = false;
+      this.displayDebtor = this.currentRole == "DEBTOR";
+    } else {
 
-    this.displayAdmin = false;
-    this.displayCustomer = false;
+      this.loggedIn = false;
+      this.displayAdmin = false;
+      this.displayDebtor = false;
+
+    }
   }
 
 }
