@@ -33,6 +33,7 @@ import { MyDebtCardComponent } from './components/my-debt-card/my-debt-card.comp
 import {MatMenuModule} from '@angular/material/menu';
 import { DebtRegistrationComponent } from './components/debt-registration/debt-registration.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { DebtCreationComponent } from './components/debt-creation/debt-creation.component';
 import {MatSelectModule} from '@angular/material/select';
 
 
@@ -59,6 +60,7 @@ import {MatSelectModule} from '@angular/material/select';
     MyDebtsComponent,
     MyDebtCardComponent,
     DebtRegistrationComponent,
+    DebtCreationComponent,
   ],
   imports: [
     BrowserModule,

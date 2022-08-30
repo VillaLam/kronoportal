@@ -1,0 +1,35 @@
+<div class="register">
+  <form>
+    <mat-card>
+      <mat-card-title>Registrering av ny skuld</mat-card-title>
+
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Borgenär</mat-label>
+        <input matInput type="text" formControlName="debtOrigin">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Skuld i SEK</mat-label>
+        <input matInput formControlName="amount">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Skuld beskrivning</mat-label>
+        <input matInput formControlName="debtDescription">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Skuld längd i år</mat-label>
+        <input matInput formControlName="planDuration">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Start datum</mat-label>
+        <input matInput formControlName="planStart">
+      </mat-form-field>
+
+      <button mat-raised-button type="submit">Registrera skuld</button>
+
+    </mat-card>
+  </form>
+</div>

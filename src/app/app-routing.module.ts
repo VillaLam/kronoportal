@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DebtCreationComponent } from './components/debt-creation/debt-creation.component';
 import { DebtRegistrationComponent } from './components/debt-registration/debt-registration.component';
 import { DebtViewComponent } from './components/debt-view/debt-view.component';
 import { LoginComponent } from './components/login/login.component';
@@ -17,14 +18,16 @@ const routes: Routes = [
   { path: 'user-dashboard', component: UserDashboardComponent },
   { path: 'vin', component: VinChaRtComponent },
   { path: 'mydebt', component: MyDebtsComponent },
-  { path: 'debtregistration', component: DebtRegistrationComponent},
+  { path: 'debtregistration', component: DebtRegistrationComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'newdebt', component: DebtCreationComponent },
 
 
 
 
-  { path: '', redirectTo: 'register', pathMatch: 'full' },
-  { path: '**', component: RegisterComponent },
+
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', component: LoginComponent },
 
 ];
 

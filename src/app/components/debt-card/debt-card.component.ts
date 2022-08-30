@@ -19,4 +19,6 @@ export class DebtCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { User } from '../models/user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Subject, tap } from 'rxjs';
 
 
 @Injectable({
@@ -49,6 +49,19 @@ export class UserServiceService {
 
   viewUsers(): Observable<User[]> {
     return this.usersSubject;
+  }
+
+  //DELETE user
+  deleteUser(userId) {
+    return this.httpcli
+      .delete(`http://localhost:9001/user//deleteUser/${userId}`)
+      .pipe(
+        tap((userId) => {
+          let indx = this.users.findIndex((user) => user.userId === userId);
+          this.users.splice(indx, 1);
+          this.usersSubject.next(this.users);
+        })
+      );
   }
 
 
