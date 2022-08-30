@@ -16,25 +16,32 @@
       <mat-icon>search</mat-icon>
     </button>
 
+    <button *ngIf="displayAdmin" mat-button class="" routerLink="/admin-dashboard">
+      <span class="headerSpan">Admin Dashboard</span>
+      <mat-icon>house</mat-icon>
+    </button>
+
+
 
     <button *ngIf="loggedIn" mat-button class="example-icon" routerLink="/mydebt">
       <span class="headerSpan">Mina sidor</span>
       <mat-icon>person</mat-icon>
     </button>
 
-    <button *ngIf="!loggedIn" mat-button class="example-icon" routerLink="/user">
+    <button *ngIf="!loggedIn" mat-button class="example-icon" routerLink="/login">
       <span class="headerSpan">Logga in</span>
       <mat-icon>person</mat-icon>
     </button>
 
-    <button mat-button class="example-icon" [matMenuTriggerFor]="menu">
+    <button *ngIf="loggedIn" mat-button class="example-icon" [matMenuTriggerFor]="menu">
       <span class="headerSpan">Meny</span>
       <mat-menu #menu="matMenu">
-        <button *ngIf="loggedIn" mat-menu-item routerLink="debtregistration">
+        <button *ngIf="displayAdmin" mat-menu-item routerLink="debtregistration">
           <span class="menySpan">Skapa case</span>
           <mat-icon class="menyIcon">note_add</mat-icon>
         </button>
-        <button *ngIf="loggedIn" mat-menu-item>
+
+        <button *ngIf="loggedIn" mat-menu-item (click)="logout()" routerLink="/login">
           <span class="menySpan">Logga ut</span>
           <mat-icon class="menyIcon">logout</mat-icon>
         </button>
