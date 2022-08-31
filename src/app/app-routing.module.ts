@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminDebtViewComponent } from './components/admin-debt-view/admin-debt-view.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DebtCreationComponent } from './components/debt-creation/debt-creation.component';
 import { DebtRegistrationComponent } from './components/debt-registration/debt-registration.component';
@@ -20,8 +21,10 @@ const routes: Routes = [
   { path: 'mydebt', component: MyDebtsComponent, canActivate: [AuthGuard] },
   { path: 'debtregistration', component: DebtRegistrationComponent, canActivate: [UserGuardGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent},
+  { path: 'home', component: HomeComponent },
   { path: 'newdebt', component: DebtCreationComponent, canActivate: [UserGuardGuard] },
+  { path: 'admindebtview', component: AdminDebtViewComponent },
+
 
 
 

@@ -50,11 +50,7 @@ export class DebtServiceService {
   deleteOrder(id): Observable<any> {
     console.log("deleteservice")
     return this.httpClient.delete(`http://localhost:9009/debt/delete/${id}`)
-      .pipe(tap((id) => {
-        let indx = this.debts.findIndex((order) => order.debtId === id);
-        this.debts.splice(indx, 1);
-        this.debtSubject.next(this.debts);
-      }));
+
   }
 
   //PUT (update debt)

@@ -6,6 +6,6 @@ export class Debt {
   dotDate: string;
   planDuration: number;
   planStart: string;
-  planEnd: string = "temp";
+  planEnd: string;
   userId: number;
 }
