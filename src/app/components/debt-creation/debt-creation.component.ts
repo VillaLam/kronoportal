@@ -9,15 +9,17 @@ import { UserServiceService } from 'src/app/services/user-service.service';
   styleUrls: ['./debt-creation.component.css']
 })
 export class DebtCreationComponent implements OnInit {
-  public registerForm: FormGroup
+  public registerDebtForm: FormGroup
 
   constructor(private fb: FormBuilder, private debtservice: DebtServiceService) {
-    this.registerForm = this.fb.group({
+    this.registerDebtForm = this.fb.group({
       debtDescription: new FormControl('', [Validators.required, Validators.minLength(1), Validators.pattern("[a-zA-Z ]*")]),
       debtOrigin: new FormControl('', [Validators.required, Validators.minLength(1), Validators.pattern("[a-zA-Z ]*")]),
       amount: new FormControl('', [Validators.pattern("[0-9]+")]),
       planDuration: new FormControl('', [Validators.pattern("[0-9]+")]),
-      planStart: new FormControl('', [Validators.pattern("[0-9]+"), Validators.minLength(6), Validators.maxLength(6)]),
+      planStart: new FormControl(''),
+      userId: new FormControl(sessionStorage.getItem("tempUserId")),
+      planEnd: new FormControl(''),
 
     })
   }
@@ -26,8 +28,8 @@ export class DebtCreationComponent implements OnInit {
   }
 
   register() {
-    console.log(this.registerForm.value)
-    this.debtservice.addDebt(this.registerForm.value).subscribe(
+    console.log(this.registerDebtForm.value)
+    this.debtservice.addDebt(this.registerDebtForm.value).subscribe(
       (res) => {
 
         console.log("New debt registered")

@@ -36,6 +36,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { DebtCreationComponent } from './components/debt-creation/debt-creation.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './components/home/home.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 
 
@@ -80,7 +82,8 @@ import { HomeComponent } from './components/home/home.component';
     NgxChartsModule,
     MatMenuModule,
     MatDividerModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
