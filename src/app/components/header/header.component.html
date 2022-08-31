@@ -46,11 +46,6 @@
           <mat-icon class="menyIcon">note_add</mat-icon>
         </button>
 
-        <button *ngIf="displayAdmin" mat-menu-item routerLink="/newdebt">
-          <span class="menySpan">new debt</span>
-          <mat-icon class="menyIcon">plane</mat-icon>
-        </button>
-
         <button *ngIf="loggedIn" mat-menu-item (click)="logout()" routerLink="/login">
           <span class="menySpan">Logga ut</span>
           <mat-icon class="menyIcon">logout</mat-icon>
