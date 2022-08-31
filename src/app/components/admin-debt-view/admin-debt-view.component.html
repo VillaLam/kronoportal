@@ -1,0 +1,25 @@
+<br>
+<div class="hela">
+  <div class="clsdebt">
+    <app-user-card [user]="user"></app-user-card>
+  </div>
+  <br>
+</div>
+<div class="clsdebt" *ngFor="let debt of debts">
+  <app-my-debt-card [debt]="debt"></app-my-debt-card>
+
+  <br>
+</div>
+
+
+
+<div>
+  <form [formGroup]="findBySocialSecurityNumber" (ngSubmit)="findDebtor()">
+
+    <mat-form-field class="findDebtor" appearance="outline">
+      <mat-label>Personnummer</mat-label>
+      <input matInput formControlName="debtorSocialSecurityNumber">
+    </mat-form-field>
+    <button mat-raised-button type="submit">Hitta Gäldenär</button>
+  </form>
+</div>
