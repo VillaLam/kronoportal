@@ -1,5 +1,5 @@
 <div class="register">
-  <form>
+  <form [formGroup]="registerDebtForm" (ngSubmit)="register()">
     <mat-card>
       <mat-card-title>Registrering av ny skuld</mat-card-title>
 
@@ -26,6 +26,11 @@
       <mat-form-field appearance="outline" class="registerInput">
         <mat-label>Start datum</mat-label>
         <input matInput formControlName="planStart">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="registerInput">
+        <mat-label>Slut datum</mat-label>
+        <input matInput formControlName="planEnd">
       </mat-form-field>
 
       <button mat-raised-button type="submit">Registrera skuld</button>
