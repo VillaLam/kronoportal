@@ -12,6 +12,7 @@
 </div>
 
 
+<br>
 
 <div>
   <form [formGroup]="findBySocialSecurityNumber" (ngSubmit)="findDebtor()">
@@ -20,6 +21,7 @@
       <mat-label>Personnummer</mat-label>
       <input matInput formControlName="debtorSocialSecurityNumber">
     </mat-form-field>
+    <br>
     <button mat-raised-button type="submit">Hitta Gäldenär</button>
   </form>
 </div>
