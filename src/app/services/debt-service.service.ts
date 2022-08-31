@@ -18,14 +18,8 @@ export class DebtServiceService {
   constructor(private httpClient: HttpClient) { }
 
   //POST add new debt
-  addDebt(newDebt: Debt): Observable<Debt> {
-    return this.httpClient.post<Debt>('http://localhost:9009/debt/saveDebt', newDebt).pipe(
-      tap((debt) => {
-        console.log('got response', debt);
-        this.debts.push(debt);
-        this.debtSubject.next(this.debts)
-      })
-    );
+  addDebt(newDebt: Debt): Observable<any> {
+    return this.httpClient.post<Debt>('http://localhost:9009/debt/createDebt', newDebt)
   }
 
   //GET all Debts
@@ -59,7 +53,7 @@ export class DebtServiceService {
 
   }
 
-  //PUT (updateOrder)
+  //PUT (update debt)
   updateDebt(updateDebt: Debt): Observable<any> {
     return this.httpClient.put(
       'http://localhost:9009/debt/update',
