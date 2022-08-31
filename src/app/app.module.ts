@@ -37,6 +37,8 @@ import { DebtCreationComponent } from './components/debt-creation/debt-creation.
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './components/home/home.component';
 import { AdminDebtViewComponent } from './components/admin-debt-view/admin-debt-view.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 
 
@@ -82,7 +84,8 @@ import { AdminDebtViewComponent } from './components/admin-debt-view/admin-debt-
     NgxChartsModule,
     MatMenuModule,
     MatDividerModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
