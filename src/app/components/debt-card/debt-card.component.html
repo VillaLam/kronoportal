@@ -3,15 +3,16 @@
     Debt-card component html
   </mat-card-title>
   <div>
+    Skuld ID: {{debt.debtId}}
     <div>
-      <p> User ID: {{debt.userId}}</p>
+      <p> Användar ID: {{debt.userId}}</p>
     </div>
 
   </div>
   <mat-card-content>
-    <p>origin: {{debt.dotDate}}</p>
-    <p>Debt amount: {{debt.amount}}</p>
-    <p>plan duration: {{debt.planDuration }}</p>
+    <p>Ursprung: {{debt.debtOrigin}}</p>
+    <p>Skuldbelopp: {{debt.amount}}</p>
+    <p>År med skulden: {{debt.planDuration }} år</p>
 
   </mat-card-content>
 
