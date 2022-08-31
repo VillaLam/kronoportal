@@ -16,6 +16,12 @@
       <mat-icon>search</mat-icon>
     </button>
 
+    <button *ngIf="displayAdmin" mat-button class="" routerLink="/admindebtview">
+      <span class="headerSpan">Admin debt view</span>
+      <mat-icon>dataset</mat-icon>
+    </button>
+
+
     <button *ngIf="displayAdmin" mat-button class="" routerLink="/admin-dashboard">
       <span class="headerSpan">Admin Dashboard</span>
       <mat-icon>house</mat-icon>
