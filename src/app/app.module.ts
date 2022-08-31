@@ -36,6 +36,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { DebtCreationComponent } from './components/debt-creation/debt-creation.component';
 import { MatSelectModule } from '@angular/material/select';
 import { HomeComponent } from './components/home/home.component';
+import { AdminDebtViewComponent } from './components/admin-debt-view/admin-debt-view.component';
 
 
 
@@ -62,6 +63,7 @@ import { HomeComponent } from './components/home/home.component';
     DebtRegistrationComponent,
     DebtCreationComponent,
     HomeComponent,
+    AdminDebtViewComponent,
   ],
   imports: [
     BrowserModule,

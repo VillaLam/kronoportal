@@ -14,9 +14,6 @@ export class MyDebtsComponent implements OnInit {
   debts: Array<Debt> = [];
   user: User = new User();
 
-  currentCustomer = '';
-
-
   constructor(private userService: UserServiceService, private debtService: DebtServiceService) {
     this.debt = new Debt()
   }
@@ -24,7 +21,6 @@ export class MyDebtsComponent implements OnInit {
   ngOnInit(): void {
     this.fetchDebts()
     this.fetchUser()
-
   }
 
 
