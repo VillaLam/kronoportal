@@ -10,10 +10,10 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 })
 export class DebtRegistrationComponent implements OnInit {
 
-  public findBySocialSecurityNumber: FormGroup;
+  public ssnFromForm: FormGroup;
 
   constructor(private fb: FormBuilder, private authservice: UserServiceService, private router: Router) {
-    this.findBySocialSecurityNumber = this.fb.group({
+    this.ssnFromForm = this.fb.group({
       socialSecurityNumber: new FormControl(''),
     })
   }
@@ -22,11 +22,11 @@ export class DebtRegistrationComponent implements OnInit {
   }
 
   findDebtor() {
-    console.log(this.findBySocialSecurityNumber.value)
-    let SSN = this.findBySocialSecurityNumber.controls["socialSecurityNumber"].value;
+    console.log(this.ssnFromForm.value)
+    let SSN = this.ssnFromForm.controls["socialSecurityNumber"].value;
     this.authservice.getUserBySocialSecurityNumber(SSN).subscribe(
       (res) => {
-        sessionStorage.setItem("tempUserId", res.userId);
+        sessionStorage.setItem("tempSSN", SSN);
         console.log("User has been found! : ", res)
 
         this.router.navigate(['newdebt'])
