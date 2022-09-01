@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DebtServiceService } from 'src/app/services/debt-service.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
@@ -11,7 +12,7 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 export class DebtCreationComponent implements OnInit {
   public registerDebtForm: FormGroup
 
-  constructor(private fb: FormBuilder, private debtservice: DebtServiceService) {
+  constructor(private fb: FormBuilder, private debtservice: DebtServiceService, private router: Router) {
     this.registerDebtForm = this.fb.group({
       debtDescription: new FormControl('', [Validators.required, Validators.minLength(1), Validators.pattern("[a-zA-Z ]*")]),
       debtOrigin: new FormControl('', [Validators.required, Validators.minLength(1), Validators.pattern("[a-zA-Z ]*")]),
@@ -31,7 +32,7 @@ export class DebtCreationComponent implements OnInit {
     console.log(this.registerDebtForm.value)
     this.debtservice.addDebt(this.registerDebtForm.value).subscribe(
       (res) => {
-
+        this.router.navigate(['admindebtview'])
         console.log("New debt registered")
       }
     )

@@ -1,16 +1,9 @@
 <mat-card class="debt-card">
   <mat-card-title>
-    Debt-card component html
+    Borgenär: {{debt.debtOrigin}}
   </mat-card-title>
-  <div>
-    Skuld ID: {{debt.debtId}}
-    <div>
-      <p> Användar ID: {{debt.userId}}</p>
-    </div>
-
-  </div>
+  <br>
   <mat-card-content>
-    <p>Ursprung: {{debt.debtOrigin}}</p>
     <p>Skuldbeskrivning: {{debt.debtDescription}}</p>
     <p>Skuldbelopp: {{debt.amount}}</p>
     <p>År med skulden: {{debt.planDuration }} år</p>

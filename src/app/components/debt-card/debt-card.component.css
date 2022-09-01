@@ -1,6 +1,12 @@
 mat-card {
-  background-color: rgb(212, 176, 241);
-  color: rgb(0, 0, 0);
+  background-color: #107c7e;
+  color: rgb(255, 255, 255);
   min-height: 200px;
+  min-width: 300px;
 
+}
+
+p{
+  font-size: 15px;
+  font-weight: 500;
 }

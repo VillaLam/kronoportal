@@ -1,4 +1,4 @@
-div {
+/* div {
   display: flex;
   justify-content: center;
 }
@@ -42,4 +42,25 @@ button {
 
 h4 {
   margin-top: 10px;
+} */
+
+.hela {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.debts {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+margin-left: 36px;
+}
+
+.debt {
+  margin-right: 75px;
+}
+
+.user {
+  margin-right: 20px;
 }

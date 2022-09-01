@@ -14,6 +14,7 @@ export class AdminDebtViewComponent implements OnInit {
   debt: Debt = new Debt();
   debts: Array<Debt> = [];
   user: User = new User();
+
   public findBySocialSecurityNumber: FormGroup;
 
 
@@ -25,8 +26,17 @@ export class AdminDebtViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userService.getUserBySocialSecurityNumber(sessionStorage.getItem("tempSSN")).subscribe(
+      (res) => {
+        this.user = res;
+        this.debtService.GetDebtBySocialSecurityNumber(sessionStorage.getItem("tempSSN")).subscribe((res: any) => {
+          console.log(res)
+          this.debts = res;
+        })
+        sessionStorage.removeItem("tempSSN");
 
-
+      }
+    )
   }
 
   fetch() {
@@ -43,10 +53,8 @@ export class AdminDebtViewComponent implements OnInit {
     )
   }
 
-
   findDebtor() {
     this.fetch();
-
   }
 
 }
