@@ -35,7 +35,12 @@ export class DebtServiceService {
 
   //GET debt by user ID
   GetDebtByUserId(userId: number): Observable<any> {
-    return this.httpClient.get(`http://localhost:9009/debt/getdebt/${userId}`)
+    return this.httpClient.get(`http://localhost:9009/debt/getdebtid/${userId}`)
+  }
+
+  //GET debt by user social security number
+  GetDebtBySocialSecurityNumber(socialSecurityNumber: String): Observable<any> {
+    return this.httpClient.get(`http://localhost:9009/debt/ssn/${socialSecurityNumber}`)
   }
 
 
