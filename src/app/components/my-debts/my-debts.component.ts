@@ -34,7 +34,7 @@ export class MyDebtsComponent implements OnInit {
       (res) => {
         user = res;
 
-        this.debtService.GetDebtByUserId(user.userId).subscribe((res: any) => {
+        this.debtService.GetDebtBySocialSecurityNumber(user.socialSecurityNumber).subscribe((res: any) => {
           this.debts = res;
         })
       }
