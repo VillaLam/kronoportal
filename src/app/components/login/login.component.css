@@ -17,30 +17,69 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: red;
-}
 
-.mover {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/ee/Serenity_beach.jpg");
-
-  display: flex;
-  justify-content: space-evenly;
-
-}
-
-.mat-card .txtcard {
-  background: none;
-  color: red;
-  box-shadow: none;
-  width: 300px;
-}
-
-
-.txtcard .mat-card-title {
-  font-weight: 600;
 }
 
 .logintext {
+  align-items: center;
+  display: flex;
+  width: 250px;
+  height: auto;
+  min-height: 300px;
+  max-height: 600px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logIn {
+
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.logintext {
+  color: #2F2E41;
+  background-color: rgba(255, 255, 255, 0.356);
+  height: 350px;
+  border-radius: 3px;
+  margin-top: 200px;
   display: flex;
   align-items: center;
+}
+
+
+
+h1 {
+  letter-spacing: 8px;
+
+}
+
+
+.mat-card {
+  background: rgba(255, 255, 255, 0.432);
+  width: 250px;
+  margin-right: 250px;
+}
+
+button {
+  background: none;
+  letter-spacing: 2px;
+
+}
+
+.mat-card-title {
+  letter-spacing: 3px;
+}
+
+.modal {
+  height: 100vh;
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5ff61ef09df92c692e8d5918/0fa9d95c-3cb6-4c7d-b82c-6af93b10004b/4+Reincarnation+image%5BMUE%5DTranquil_Tuesday_Final.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
 }

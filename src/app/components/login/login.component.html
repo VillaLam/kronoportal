@@ -1,48 +1,40 @@
-<div>
+<div class="modal">
 
-  <div class="mover">
+  <div class="logIn">
+    <form [formGroup]="logInForm" (ngSubmit)="logIn()">
+      <mat-card>
+        <mat-card-title>Logga in</mat-card-title>
 
-    <div class="logIn">
-      <form [formGroup]="logInForm" (ngSubmit)="logIn()">
-        <mat-card>
-          <mat-card-title>Logga in</mat-card-title>
+        <mat-form-field appearance="outline" class="registerInput">
+          <mat-label>Personnummer</mat-label>
+          <input matInput formControlName="socialSecurityNumber">
+        </mat-form-field>
 
-          <mat-form-field appearance="outline" class="registerInput">
-            <mat-label>Personnummer</mat-label>
-            <input matInput formControlName="socialSecurityNumber">
-          </mat-form-field>
+        <mat-form-field appearance="outline" class="registerInput">
+          <mat-label>Lösenord</mat-label>
+          <input matInput formControlName="password">
+        </mat-form-field>
 
-          <mat-form-field appearance="outline" class="registerInput">
-            <mat-label>Lösenord</mat-label>
-            <input matInput formControlName="password">
-          </mat-form-field>
+        <mat-form-field color="Accent" appearance="outline" class="registerInput">
+          <mat-label>Roll</mat-label>
+          <mat-select formControlName="role">
+            <mat-option value="ADMIN">ADMIN</mat-option>
+            <mat-option value="DEBTOR">DEBTOR</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
 
-          <mat-form-field appearance="outline" class="registerInput">
-            <mat-label>Roll</mat-label>
-            <mat-select formControlName="role">
-              <mat-option value="ADMIN">ADMIN</mat-option>
-              <mat-option value="DEBTOR">DEBTOR</mat-option>
-            </mat-select>
-          </mat-form-field>
-
-          <button mat-raised-button type="submit">Logga in</button>
-
-        </mat-card>
-      </form>
-    </div>
-
-    <div class="logintext">
-      <mat-card class="txtcard">
-
-        <mat-card-title>
-          Vi hjälper dig ta hand om dina skulder
-        </mat-card-title>
-
-        <mat-card-content>
-          Med hjälp från kronofogden kan du tygla dina skulder och fortsätta leva ett drägligt liv
-        </mat-card-content>
+        <button mat-raised-button type="submit">Logga in</button>
 
       </mat-card>
-    </div>
+    </form>
   </div>
+  <!--
+  <div class="logintext">
+    <h1>Välkommen till kronoportal </h1>
+    <p>Få hjälp med att hanter dina skulder. </p>
+  </div> -->
+  <div></div>
+
+
 </div>
