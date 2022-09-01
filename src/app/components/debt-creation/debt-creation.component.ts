@@ -18,7 +18,7 @@ export class DebtCreationComponent implements OnInit {
       amount: new FormControl('', [Validators.pattern("[0-9]+")]),
       planDuration: new FormControl('', [Validators.pattern("[0-9]+")]),
       planStart: new FormControl(''),
-      userId: new FormControl(sessionStorage.getItem("tempUserId")),
+      socialSecurityNumber: new FormControl(sessionStorage.getItem("tempSSN")),
       planEnd: new FormControl(''),
 
     })

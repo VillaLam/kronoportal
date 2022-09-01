@@ -34,7 +34,8 @@ export class AdminDebtViewComponent implements OnInit {
     this.userService.getUserBySocialSecurityNumber(this.findBySocialSecurityNumber.controls["debtorSocialSecurityNumber"].value).subscribe(
       (res) => {
         this.user = res;
-        this.debtService.GetDebtByUserId(res.userId).subscribe((res: any) => {
+        this.debtService.GetDebtBySocialSecurityNumber(res.socialSecurityNumber).subscribe((res: any) => {
+          console.log(res)
           this.debts = res;
         })
 
