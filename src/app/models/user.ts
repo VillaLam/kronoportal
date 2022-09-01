@@ -6,5 +6,5 @@ export class User {
   lastName: string = "";
   address: string = "";
   phoneNumber: string = "";
-  role: string = "DEBTOR";
+  role: string = "";
 }
