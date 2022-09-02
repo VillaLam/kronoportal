@@ -2,10 +2,10 @@ export class Debt {
   debtId: number;
   amount: number;
   debtDescription: String;
-  debtOrigin: string;
-  dotDate: string;
+  debtOrigin: String;
+  dotDate: String;
   planDuration: number;
-  planStart: string;
-  planEnd: string = "temp";
+  planStart: String;
+  planEnd: String = "temp";
   userId: number;
 }
