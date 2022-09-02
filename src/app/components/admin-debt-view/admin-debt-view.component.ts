@@ -30,8 +30,8 @@ export class AdminDebtViewComponent implements OnInit {
       (res) => {
         this.user = res;
         this.debtService.GetDebtBySocialSecurityNumber(sessionStorage.getItem("tempSSN")).subscribe((res: any) => {
-          console.log(res)
           this.debts = res;
+          this.totalsum();
         })
         sessionStorage.removeItem("tempSSN");
 
@@ -45,8 +45,8 @@ export class AdminDebtViewComponent implements OnInit {
       (res) => {
         this.user = res;
         this.debtService.GetDebtBySocialSecurityNumber(res.socialSecurityNumber).subscribe((res: any) => {
-          console.log(res)
           this.debts = res;
+          this.totalsum();
         })
 
       }
@@ -55,6 +55,12 @@ export class AdminDebtViewComponent implements OnInit {
 
   findDebtor() {
     this.fetch();
+  }
+
+  totalsum () {
+    let sum = 0;
+    this.debts.forEach(a => sum += a.amount);
+    console.log(sum);
   }
 
 }
